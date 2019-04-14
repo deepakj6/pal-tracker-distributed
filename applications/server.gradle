@@ -9,8 +9,8 @@ dependencyManagement {
 
 dependencies {
     compile project(":components:rest-support")
-    compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
+    compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry:$springCloudServicesClientLibrariesVersion"
 
     compile "org.springframework.boot:spring-boot-starter-web"
 
