@@ -3,11 +3,11 @@ applications:
 - name: tracker-timesheets
   instances: 1
   memory: 256M
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
   routes:
-  - route: timesheets-pal-INITIALS.apps.pikes.pal.pivotal.io
+  - route: timesheets-pal-dj.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.2/publish
   services:
   - tracker-timesheets-database
   - tracker-service-registry
-  - tracker-circuit-breaker-dashboard
   - tracker-amqp
